@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>140 Years of UO | Web Map</title>
+    <meta content="width=device-width" name="viewport">
+	<link href="css/leaflet.css" rel="stylesheet"><!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" href="css/leaflet.ie.css" />
+    <![endif]-->
+	<link rel="stylesheet" href="lib/jquery-ui/css/custom-theme/jquery-ui-1.10.2.custom.css" />
+    <link href="css/style.css" rel="stylesheet">
+	
+		
+    
+</head>
+
+<body>
+<div id="header">
+    <div id="headerleft">
+       <img src="images/title.png">
+	   </div>
+	<div id="headerright">
+		<br><br><br><h4><a href="about.html">about </a></h4>
+		</div>
+</div>
+		
+        <div id="containermap">
+		
+		<div id="wrappermap">
+		<a id="legendYear"></a>
+					<span class="navzoom">
+					
+					
+					<a href="map.html">home</a> | 
+					<a id="maincampus">campus</a> | 
+					<a id="historic">historic core</a> |
+					<a id="southeast">southeast</a> | 
+					<a id="southwest">southwest</a> <br>
+					<a id="east">east</a> | 
+					<a id="northeast">northeast</a> |
+					<a id="riverfront">riverfront</a> | 
+					<a id="autzenstadium">autzen</a> | 
+					<a id="southeugene">south eugene</a>	
+					</span>
+					<br>
+					
+					
+					<div id="map"></div>
+					
+					
+					<div id="infoPanel">
+					
+					<div id='sidebarHeader' class="scroll1load"> About the web map... </div>
+					<div id='sidebarHeader2' class="scroll1load"> </div>
+					<center><a id="sidebarImg"class="scroll1load"><img src="images/output/oregonsignwide.jpg" width=220px></a></center>					
+					<div id='sidebarContent'class="scroll1load"><p>This web map visualizes the historical timeline of present University of Oregon campus buildings
+					from 1875 to present. Note that past buildings that have been demolished are not included in this map. You can animate the map by clicking on the VCR buttons or by dragging the timeline slider. You may click on any campus building to
+					learn more about its history. For more in-depth details, visit the building index page. <br><br>Developed by Rudy Omri. Dept of Geography. University of Oregon. 2015. </p></div>
+					<div id='sidebarContentAuthor' class="scroll1load"> </div>
+						<!-- <h4><strong>Search city</strong>
+						<select id="retrieveOptions"></select> </h4> -->
+						</div>
+					
+					
+					
+					
+		
+				
+				<div id="footer">
+			<div id="vcr-controls">
+						<a class="vcr back-full"> <img alt="back full" src="images/back-full.png"></a> 
+						<a class="vcr back"><img alt="back"src="images/back.png"></a> 
+						<a class="vcr play"><img alt="play"src="images/play.png"></a> 
+						<a class="vcr pause"><img alt="pause" src="images/pause.png"></a>
+						<a class="vcr step"><img alt="step" src="images/step.png"></a>
+						<a class="vcr step-full"><img alt="step full" src="images/step-full.png"></a>
+					</div>
+				<!-- <div id="vcr-controls"><h2>
+						<a class="vcr back-full"> 1875</a> 
+						<a class="vcr back">previous year</a> 
+						<a class="vcr play">play</a> 
+						<a class="vcr pause">pause</a>
+						<a class="vcr step">next year</a>
+						<a class="vcr step-full">present</a></h2>
+					</div> -->
+				
+				<div id="temporalSlider"><br>
+				<table style="margin-left: -12px; width:107%"><tr><td>1875</td><td>1885</td><td>1895</td><td>1905</td><td>1915</td><td>1925</td><td>1935</td><td>1945</td>
+				<td>1955</td><td>1965</td><td>1975</td><td>1985</td><td>1995</td><td>2005</td><td>2015</td></div> 
+				
+				</div>
+		
+		
+	</div>
+	
+		<script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+        <script src="js/leaflet.js"></script>
+		<script src="js/chart.js"></script>
+		<script src="js/jquery-min.js"></script> 
+        <script src="js/EventTarget.js"></script> 
+		<script src="js/ProcessCSV.js"></script> 
+		<script src="lib/jquery-ui/js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="js/main2.js"></script>
+		</div>
+		</div>
+    
+</body>
+</html>

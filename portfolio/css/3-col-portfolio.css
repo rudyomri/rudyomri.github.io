@@ -1,0 +1,53 @@
+/*!
+ * Start Bootstrap - 3 Col Portfolio (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 70px; 
+	font-family: "Spectral", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: white;
+	background-color: #485e5f;/* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+a {
+  color: #d3c68d;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #fffedd;
+}
+
+.light, .light a {
+  font-family: "Bungee Hairline";
+  font-weight: bold;
+  font-size: 24pt;
+  text-transform: none;
+}
+	
+
+footer {
+    margin: 50px 0;
+}
+
+p {
+	font-family: "Spectral";
+}
+
+h1 {
+	font-family: "Spectral";
+}
+
+h3  {
+	font-family: "Spectral";
+}
+

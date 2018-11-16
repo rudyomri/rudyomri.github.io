@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>UW-Madison: Campus Food Map | More info</title>
+    <meta content="width=device-width" name="viewport">
+	<link href="css/leaflet.css" rel="stylesheet"><!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" href="css/leaflet.ie.css" />
+    <![endif]-->
+	<link rel="stylesheet" href="lib/jquery-ui/css/custom-theme/jquery-ui-1.10.2.custom.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+	
+		
+    
+</head>
+
+<body>
+    <div id="header2">
+		<table style="width:700px; margin-left: 30px">
+			<tr>
+				<td><a href="../campusfoodmap/index.html"><img width="135px" src="images/uwmlogo.png"><a></td>
+				<td><h3>Campus Food Map</h3><h6>University of Wisconsin-Madison</h6></td>
+			</tr>
+		</table>
+        
+    </div>
+		<a name="menu"></a>
+        <div id="container2">
+		<div id="base"><center>
+		<span style="font-size: 16pt; font-family: verdana; font-weight: bold">More Info</span><br><br>
+		<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+		
+		<b>RESTAURANTS</b><br>
+		<a href="../campusfoodmap/reviews.html#buffalo">Buffalo Wild Wings</a> |
+		<a href="../campusfoodmap/reviews.html#capital">Capital Cafe</a> | 
+		<a href="../campusfoodmap/reviews.html#rathskeller">Der Rathskeller</a> | 
+		<a href="../campusfoodmap/reviews.html#ginger">Ginger Root</a> | 
+		<a href="../campusfoodmap/reviews.html#harvest">Harvest Grain</a> <br> 
+		<a href="../campusfoodmap/reviews.html#lakefront">Lakefront on Langdon</a> |
+		<a href="../campusfoodmap/reviews.html#library">Library Cafe and Bar</a> |
+		<a href="../campusfoodmap/reviews.html#milios">Milio's</a> | 
+		<a href="../campusfoodmap/reviews.html#qq">QQ Express</a> | 
+		<a href="../campusfoodmap/reviews.html#sett">The Sett</a> <br>  
+		<a href="../campusfoodmap/reviews.html#steenbock">Steenbock’s on Orchard</a> |
+		<a href="../campusfoodmap/reviews.html#subway">Subway</a> | 
+		<a href="../campusfoodmap/reviews.html#slow">Slow Food Cafe</a> | 
+		<a href="../campusfoodmap/reviews.html#urban">Urban Slice</a>
+		<br><br>
+		<b>BADGER MARKETS AND CAFES</b><br>
+		<a href="../campusfoodmap/reviews.html#biochemistry">Badger Market in Biochemistry</a> | 
+		<a href="../campusfoodmap/reviews.html#healthsc">Badger Market in Health Sciences Learning Center</a> <br>
+		<a href="../campusfoodmap/reviews.html#ingraham">Badger Market in Ingraham</a> |
+		<a href="../campusfoodmap/reviews.html#medsc">Badger Market in Med Sciences</a> | 
+		<a href="../campusfoodmap/reviews.html#nancy">Badger Market in School of Human Ecology</a> <br>
+		<a href="../campusfoodmap/reviews.html#badgerus">Badger Market in Union South</a> |
+		<a href="../campusfoodmap/reviews.html#crossroads">Crossroads Cafe</a> |  
+		<a href="../campusfoodmap/reviews.html#scoopus">Daily Scoop at Union South</a> <br>
+		<a href="../campusfoodmap/reviews.html#scoopmu">Daily Scoop at Memorial Union</a> | 
+		<a href="../campusfoodmap/reviews.html#e2">E2 - Engineering Eatery</a> |			
+		<a href="../campusfoodmap/reviews.html#feedbag">Feed Bag</a> <br>
+		<a href="../campusfoodmap/reviews.html#highland">Highland Grounds</a> | 
+		<a href="../campusfoodmap/reviews.html#microcosm">Microcosm Cafe</a> | 
+		<a href="../campusfoodmap/reviews.html#openbook">Open Book Cafe</a> 
+		<br><br>
+		<b>DINING HALLS</b><br>
+		<a href="../campusfoodmap/reviews.html#carson">Carson's Market</a> | 
+		<a href="../campusfoodmap/reviews.html#lizwaters">Elizabeth Waters Dining Room</a> | 
+		<a href="../campusfoodmap/reviews.html#fourlakes">Four Lakes Market</a>	|		
+		<a href="../campusfoodmap/reviews.html#frank">Frank Holt Center</a> <br>
+		<a href="../campusfoodmap/reviews.html#gordon">Gordon Dining and Event Center</a> |
+		<a href="../campusfoodmap/reviews.html#newell">Newell's Deli</a> |
+		<a href="../campusfoodmap/reviews.html#rhetas">Rheta's Market</a>			
+		<br><br>
+		<b>COFFEEHOUSES</b><br>
+		<a href="../campusfoodmap/reviews.html#aldos">Aldo's Cafe</a> | 
+		<a href="../campusfoodmap/reviews.html#coffeebytes">CoffeeBytes</a> | 
+		<a href="../campusfoodmap/reviews.html#peetsgrainger">Peet’s Coffee & Tea at Grainger School of Business</a>	<br>		
+		<a href="../campusfoodmap/reviews.html#peetsmu">Peet’s Coffee & Tea at Memorial Union</a> |
+		<a href="../campusfoodmap/reviews.html#prairie">Prairie Fire</a>
+		<br><br>
+		<b>OTHER</b><br>
+		<a href="../campusfoodmap/reviews.html#babcock">Babcock Hall Dairy Store</a> |
+		<a href="../campusfoodmap/reviews.html#fhking">F.H. King Handouts</a>		</center>
+			
+					
+<br><br><br><br>
+<center><img src="images/floralleft.png" width="60px"><span style="font-size: 14pt; font-family: verdana; font-weight: bold">&nbsp;&nbsp;Restaurants&nbsp;&nbsp;</span><img src="images/floralright.png" width="60px"></center>
+<br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="buffalo"></a>
+<b>Buffalo Wild Wings</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Buffalo Wild Wings located on University Ave is a popular restaurant on campus.  The main attraction is the wings and the 22 different sauces they offer.  From sweet and mild to spicy hot, there are enough options to fulfill anyone’s cravings.  Although they are known for their wings, they do offer a selection of vegetarian options such as the garden crasher, mozzarella sticks, nachos, potato wedges, soft pretzels, and a black bean burger.  A local distributor in Wisconsin provides all of the food.  Buffalo Wild Wings is very good at managing its waste as it composts all oil and grease and provides recycling to customers.  All coffee options are fair trade. The restaurant also provides customers with reusable kitchenware for every meal. To learn more about their menu, check out their <a href="http://buffalowildwings.com/en/menu/" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="capital"></a>
+<b>Capital Cafe</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Capital Café is a great place to order lunch, with easy to-go options or sit down dining options.  Their menu consists of sandwiches, soups, and salads.  One of the highlights of Capital Café is they offer a good selection of vegetarian options with two delicious sandwiches, two soups, and all four salads.  This café also provides composting bins for customers to sustainably dispose of their leftovers.  These  composting bins are appropriately labeled and easy to see. Come check out the menu in The Grainger School for Business and see how their sustainable practices.
+<a href="http://www.union.wisc.edu/capitalcafe.htm" target="_blank">Website</a></div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="rathskeller"></a>
+<b>Der Rathskeller</b><br>
+<img src="images/vegetarian.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<br>
+Der Rathskeller is located on the first floor in the Memorial Union and offers true American food.  Menu items include sandwiches/paninis, hamburgers, soups, and salads. This is a great place to eat and socialize.  Each entree category contains a vegetarian item.  Recycling is located within Der Rathskeller dining area. For more information about location hours and menu options, check out their 
+<a href="http://www.union.wisc.edu/dine-rathskeller.htm" target="_blank">website</a></div>.
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="ginger"></a>
+<b>Ginger Root</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<br>
+This pan-Asian restaurant can be accessed on the first floor of Union South. This location offers reusable dishware and silverware as well as eco-friendly to-go containers. Their selection includes classic entrees, rice, appetizers, and a variety of beverages. This restaurant offers two vegetarian options and local food products, including the soy sauce. Ginger Root also practices pre-consumer composting and provides recycling bins. This restaurant is located in close proximity to at least two composting bins in Union South. Ginger Root also participated in a study to determine their environmental impact by calculating their carbon footprint. For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/gingerroot.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="harvest"></a>
+<b>Harvest Grains</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<br>
+Harvest Grains, is a popular sandwich spot in Union South. Known for its flatbread sandwiches, salads, and sustainable menu options, Harvest Grains prides itself in offering local foods on their menu.  The menu is 40% vegetarian. This is a great place to order a yummy vegetarian sandwich! The most popular vegetarian sandwich is the Farmer’s Market with grilled portabella mushrooms, hummus, and greens. Harvest Grains also practices pre-consumer composting and provides recycling and composting bins for consumer use. For more information on location hours and menu options, check out their <a href="http://www.union.wisc.edu/harvestgrains.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="lakefront"></a>
+<b>Lakefront on Langdon</b><br>
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<br>
+Lakefront on Langdon offers a variety of cuisines such as Asian, Mexican, American, a salad bar, and pizza.  Their variety of menu options and view of Lake Mendota makes this place an ideal lunch spot. Menu variety ranges from vegetarian stir-fry from Thu’s fan dim, tacos from Taqueria del loco, or pizza from Urban Slice. Their customizable salad bar sets them apart from all other restaurants in the Unions.  This location also provides recycling and composting bins. To read more of their menu selection and location hours, check out their 
+<a href="http://www.union.wisc.edu/lakefrontonlangdon.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="library"></a>
+<b>Library Cafe and Bar</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+The Library Cafe and Bar is located on the corner of Campus Drive and N. Randall Avenue. The Library serves a variety of snacks, including many vegetarian options, and beverages, including fair trade coffee. There is a reusable mug discount for those who bring in their own coffee mug. Most of the food at this location is obtained locally, including burgers, breads, pesto, bacon, and cheese curds. All of their entrees and beverages are served on reusable plates and glasses. For more information about hours and menu options, check out their <a href="http://www.librarycafeandbar.com/" target="_blank">website</a>.</div>
+  
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="milios"></a>
+<b>Milio’s</b><br>
+<br>
+Conveniently located on East Campus Mall, Milio’s offers a number of delicious sandwiches, as well as chips, cookies, pickles, and soft drinks. They offer at least one vegetarian sandwich, though other seasonal sandwiches are offered. For more information about location hours and menu options, check out their <a href="http://www.milios.com" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="qq"></a>
+<b>QQ Express</b><br>
+<img src="images/reusable.png" width="20px">
+<br>
+Located on University Avenue, QQ Express is an asian restaurant for students on or near campus. They serve all the classic dishes: fried rice, lo mein, general tso’s, and more. In addition to their regular menu, they offer great lunch and dinner specials, allowing you to taste several dishes per visit. For more information about location hours and menu options, visit their <a href="https://plus.google.com/107723468383001841955/about?gl=us&hl=en" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="sett"></a>
+<b>The Sett</b><br>
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<br>
+This restaurant can be accessed on the first floor and lower level of Union South. This location offers reusable dishware, silverware, glass goblets, and eco-friendly to-go containers. Their selection includes a variety of appetizers, burgers, brats, and a rare tap list. This restaurant offers a delicious vegetarian Black Bean Burger as well as the option of local Wisconsin cheddar cheese on several burgers. The Sett also practices pre-consumer composting and provides recycling and composting bins for consumer use. This location also offers live music, dancing, bowling, billiards, rock climbing, and the perfect place to watch your favorite sports. For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/dine-sett.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="steenbock"></a>
+<b>Steenbock’s on Orchard</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Located in the Wisconsin Institute for Discovery, one of the main focuses of this restaurant is incorporating local and sustainable food into their menu. Their menu changes seasonally to feature foods at the peak of their flavor. Additionally, they offer fairtrade coffee and use reusable kitchenware for meals. For more information about location hours and menu options, visit their <a href="http://www.steenbocksonorchard.com/" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="subway"></a>
+<b>Subway </b><br>
+<br>
+Subway has two branches of this chain restaurant located on campus, which include the corner of University and Randall Avenue as well as the corner of Charter and Dayton Street. Always bustling between classes, Subway boasts a number of vegetarian sandwiches, flatizzas, and salads. For more information about location hours and menu options, check out their <a href="  http://www.subway.com" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="slow"></a>
+<b>Slow Food Cafe</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<br>
+The Slow Food UW Cafe is located at the Crossing on University Avenue. This location is a student run, non-profit organization offering a weekly dining experience every Wednesday from 11:30am-2pm at the Crossing as well as a weekly dinner. The Slow Food Cafe is a great place to find locally sourced, sustainable food on campus at affordable prices. For more information, check out their <a href="http://slowfooduw.com/slow-food-uw-cafe/" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="urban"></a>
+<b>Urban Slice</b><br>
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<br>
+This restaurant can be accessed on the first floor of Union South. This location offers reusable silverware and eco-friendly to-go containers. Their menu selection includes a variety of pizza toppings, salads, and beverages. This restaurant offers delicious New York Style pizza by the slice, the whole, or even personal-sized gluten-free pizzas.  Urban Slice also provides recycling bins and practices pre-consumer composting. This restaurant is also located in close proximity to at least two composting bins in Union South. The gigantic pizzas at Urban Slice are also offered at the Memorial Union’s Lakefront on Langdon. For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/urbanslice.htm" target="_blank">website</a>.</div>
+<br><br><br><br>
+<center><img src="images/floralleft.png" width="60px"><span style="font-size: 14pt; font-family: verdana; font-weight: bold">&nbsp;&nbsp;Badger Markets & Cafés&nbsp;&nbsp;</span><img src="images/floralright.png" width="60px"></center>
+<br><br>
+
+<a name="biochemistry"></a>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<b>Badger Market in Biochemistry</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Badger Markets offer a variety of to-go goods options that satisfy one’s appetite. This location can be accessed through the Henry Mall entrance. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  Badger Markets always offer at least one vegetarian option, and all of their coffee options are fairtrade. Some sustainable aspects of the Badger Markets include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location. All Badger Markets compost their used coffee beans. Check out the 13 Badger Markets/Cafés around campus!  For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/badgermarketbiochem.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="healthsc"></a>
+<b>Badger Market in Health Sciences Learning Center</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Badger Markets offer a variety of to-go goods options that satisfy one’s appetite. This location can be accessed on the first floor of the commons area in the Health Sciences Learning Center. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  Badger Markets always offer at least one vegetarian option, and all of their coffee options are fairtrade. Some sustainable aspects of the Badger Markets include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location. All Badger Markets compost their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/badgermarket-healthsci.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="ingraham"></a>
+<b>Badger Market in Ingraham</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Badger Markets offer a variety of to-go goods options that satisfy one’s appetite. This location can be accessed on the first floor of Ingraham. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  Badger Markets always offer at least one vegetarian option, and all of their coffee options are fairtrade. Some sustainable aspects of the Badger Markets include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location. All Badger Markets compost their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their <a href="
+http://www.union.wisc.edu/badgermarket-ingraham.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="medsc"></a>
+<b>Badger Market in Medical Sciences</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Badger Markets offer a variety of to-go goods options that satisfy one’s appetite. This location can be accessed through the Charter Street entrance. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks. Badger Markets always offer at least one vegetarian option, and all of their coffee options are fairtrade. Some sustainable aspects of the Badger Markets include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location. All Badger Markets compost their used coffee beans. Check out the 13 Badger Markets/Cafés around campus!  For more information about location hours and menu options, check out their <a href="
+http://www.union.wisc.edu/badgermarketmed.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="nancy"></a>
+<b>Badger Market in the School of Human Ecology Building</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Badger Markets offer a variety of to-go goods options that satisfy one’s appetite. This location can be accessed at Nancy Nicholas Hall in the School of Human Ecology Building. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  Badger Markets always offer at least one vegetarian option, and all of their coffee options are fairtrade. Some sustainable aspects of the Badger Markets include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location. All Badger Markets compost their used coffee beans. For more information about location hours and menu options, check out their <a href="
+http://www.union.wisc.edu/badgermarket-sohe.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="badgerus"></a>
+<b>Badger Market in Union South</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Badger Markets offer a variety of to-go goods options that satisfy one’s appetite. This location can be accessed on the first floor on the west end of Union South. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  Badger Markets always offer at least one vegetarian option, and all of their coffee options are fairtrade. Some sustainable aspects of the Badger Markets include providing recycling bins and offering discounts for reusable mugs. This restaurant is also located in close proximity to at least two composting bins in Union South. Customers may also buy reusable mugs on location. All Badger Markets compost their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/badgermarketus-about.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="crossroads"></a>
+<b>Crossroads Café</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+The Café offers a variety of to-go goods in eco-friendly containers that satisfy one’s appetite. This location can be accessed on the first floor of the School of Education Building. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  This Café offers at least one vegetarian option and all coffee options are fairtrade. Some sustainable aspects of the café include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location and rest assured the café composts their used coffee beans. Check out the 13 Badger Markets/Cafés around campus!For more information about location hours and menu options, check out their <a href="
+http://www.union.wisc.edu/crossroadscafe.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="scoopmu"></a>
+<b>Daily Scoop (at Memorial Union)</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+This location can be accessed on the first floor of Memorial Union. This location offers eco-friendly to-go containers as well as sandwiches, soups, baked goods, salads, and beverages. Their menu selection also includes a delicious variety of locally baked cookies and delicious ice cream from UW-Madison’s own Babcock Dairy. This location is located near communal recycling bins and practices pre-consumer composting. A smaller Daily Scoop location can be found on the first floor of Union South. For more information about location hours and menu options, check out their <a href="
+http://www.union.wisc.edu/dailyscoop.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="scoopus"></a>
+<b>Daily Scoop (at Union South)</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+This location can be accessed on the first floor of Union South. The Daily Scoop offers eco-friendly to-go containers. Their menu selection includes a delicious variety of locally baked cookies and ice cream from UW-Madison’s own Babcock Dairy. This restaurant offers delicious Babcock ice cream in cups or cones. This location practices pre-consumer composting and is located near Union South’s communal recycling and composting bins. A larger Daily Scoop location can also be found on the first floor at the Memorial Union. For more information about location hours and menu options, check out their <a href=" http://www.union.wisc.edu/dailyscoop.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="e2"></a>
+<b>E^2 - Engineering Eatery</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+E^2 offers a variety of to-go goods options that satisfy one’s appetite. This location can be accessed on the first floor Student Learning Center in Engineering Hall. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  This eatery offers at least one vegetarian option and all coffee options are fairtrade. Some sustainable aspects of this location include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location and rest assured this location composts their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their 
+<a href="http://www.union.wisc.edu/e2.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<a name="feedbag"></a>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<b>Feed Bag</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+E^2 offers a variety of to-
+This eatery offers a variety of to-go goods options that satisfy one’s appetite. This location can be accessed on the second floor of the School of Veterinary Medicine. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  This eatery offers at least one vegetarian option and all coffee options are fairtrade. Some sustainable aspects of this location include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location and rest assured this location composts their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their 
+<a href="http://www.union.wisc.edu/feedbag.htm" target="_blank">website</a>.</div>
+ 
+ 
+<br><br><br><br>
+<a name="highland"></a>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<b>Highland Grounds</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+This eatery offers a variety of to-go goods options that satisfy one’s appetite. This location can be accessed on the first floor of the Waisman Center. Their selection ranges from fresh bakery items, yogurt parfaits, fresh fruit, and a variety of drinks.  This eatery offers at least one vegetarian option and all coffee options are fairtrade. Some sustainable aspects of this location include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location and rest assured this location composts their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their 
+<a href="http://www.union.wisc.edu/highlandgrounds.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<a name="microcosm"></a>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<b>Microcosm Cafe</b><br
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+This eatery offers a variety of to-go goods options that satisfy one’s appetite. This location can be accessed in the north atrium of the Microbial Sciences Building. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks.  This eatery offers at least one vegetarian option and all coffee options are fairtrade. Some sustainable aspects of this location include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location and rest assured this eatery composts their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their
+<a href="http://www.union.wisc.edu/microcosm.htm" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<a name="openbook"></a>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<b>Open Book Cafe</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+The Café offers a variety of to-go goods in eco-friendly containers to satisfy one’s appetite. This location can be accessed on the first floor of Helen C. White Hall, also known as College Library. Their selection ranges from sandwiches, soups, pastries, salads, and a variety of drinks. This Café offers at least one vegetarian option and all coffee options are fairtrade. Some sustainable aspects of the café include providing recycling bins and offering discounts for reusable mugs. Customers may also buy reusable mugs on location and this eatery composts their used coffee beans. Check out the 13 Badger Markets/Cafés around campus! For more information about location hours and menu options, check out their
+<a href="http://www.union.wisc.edu/openbook.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<center><img src="images/floralleft.png" width="60px"><span style="font-size: 14pt; font-family: verdana; font-weight: bold">&nbsp;&nbsp;Dining Halls&nbsp;&nbsp;</span><img src="images/floralright.png" width="60px"></center>
+<br><br>
+<a name="carson"></a>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<b>Carson’s Market </b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<br>
+Carson’s market, located in Carson Gulley Center, offers a wide variety of options for students, and is especially convenient for those living in the lakeshore area. Much of their food is sourced locally, including baked goods and Babcock dairy products. They have many create-your-own options, opening the possibilities for vegetarian and vegan meals. In general, at least a couple meals per day at Carson’s would be considered vegan. Carson’s participates in both pre- and post-consumer composting of food waste, and recycling bins are available for student use. In addition, they offer reusable plates, silverware, and cups to reduce waste. Fairtrade coffee is available, and students who bring in their own mug will receive a discount on their coffee purchases. For more information about location hours and menu options, check out their <a href="http://www.housing.wisc.edu/dining/carsons" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="lizwaters"></a>
+<b>Elizabeth Waters Dining Room</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<img src="images/icecream.png" width="20px">
+<br>
+Elizabeth Waters Dining Room is located in the Elizabeth Waters residence hall, offering convenient food for students living in the area, as well as those with classes in the area. Food areas include 1849, Buckingham Bakery, Delicious, Global Kitchen, and Great Greens. Liz Waters has reusable plates, silverware, and cups, which cut back on waste produced. They participate in both pre- and post - consumer composting, and have recycling bins available for student use. Generally you will be able to find a couple vegetarian options here in addition to the excellent salad bar. Liz Waters serves fair trade coffee, and offers a reusable mug discount. For more information about location hours and menu options, check out their <a href="https://www.housing.wisc.edu/dining/liz" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="fourlakes"></a>
+<b>Four Lakes Market </b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<img src="images/icecream.png" width="20px">
+<br>
+Four Lakes Market is located in the first floor of Dejope residence hall, and has a very wide variety of foods to choose from on a daily basis. Food areas include 1849, the Bean and Creamery, Buona Cucina, Delicious, Fired Up, Flamingo Run, Global Kitchen, Great Greens, and Maki-Mono & Noodles. Within these areas are housemade soups, fresh greens, sandwiches, and much more. Coffee offered at the Bean and Creamery is fairtrade, and customers can receive a discount for bringing in their own mug. Burgers offered at Four Lakes are all grass-fed beef. The Four Lakes Market participates in both pre- and post-consumer composting and has recycling bins available for use. For more information about location hours and menu options, check out their <a href=" https://www.housing.wisc.edu/dining/fourlakes" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="frank"></a>
+<b>Frank Holt Center</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<img src="images/icecream.png" width="20px">
+<br>
+TThe Bean and Creamery at the Frank Holt Center is located on the ground floor, directly across from Dejope Hall. The Bean and Creamery serves ice cream and coffee. The ice cream is locally sourced from Babcock Dairy and the coffee is fairtrade.  With the use of a personal travel mug, one will receive a 10 cent discount with a coffee purchase. A recycling bin can be found right on site. One key sustainability feature at the Frank Holt Center is their extensive recycling receptacle for plastic bags, ink cartridges, and batteries. Check out their location hours on the University Housing dining <a href=" https://www.housing.wisc.edu/dining/hours" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="gordon"></a>
+<b>Gordon Commons</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<img src="images/icecream.png" width="20px">
+<br>
+Gordon Commons’ newly renovated dining facility has made the dining experience  for students much more sustainable.  Not only is their menu more accommodating to vegetarians with their large salad bar, but each different food station provides at least one vegetarian option. Food areas include 1849, the Bean and Creamery, Buona Cucina, Delicious, Fired Up, Flamingo Run, Global Kitchen, Great Greens, and Maki-Mono & Noodles. Within these areas are housemade soups, fresh greens, sandwiches, and much more. They are especially known for their GRASS-FED BURGERS! Coffee offered at the Bean and Creamery is fair trade, and customers can receive a discount for bringing in their own mug. Gordon Commons participates in both pre- and post-consumer composting and has recycling bins available. For more information about location hours and menu options, check out their <a href=" https://www.housing.wisc.edu/dining/gordon" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="newell"></a>
+<b>Newell’s Deli</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<img src="images/icecream.png" width="20px">
+<br>
+Newell’s Deli is located on the first floor of the Newell’s Smith Dormitory.  Newell’s is your one-stop shop for lunch, dinner dessert, coffee, and groceries.  Newell’s offers a range of options such as a salad bar, soups, 14 different sandwiches, hot entrees, ice cream, and a variety of to-go items. Their two different types of coffee are fair trade, and customers are offered a discount when utilizing their own personal mug or purchased travel mug. There are a variety of vegetarian options which include four different sandwiches, hot entrees, two soups, and a self-serve salad bar. UW Housing includes local food into Newell’s with their fresh produce, bread, cheese, and hot meals. One of the greatest features at Newell’s is their composting, where workers compost for the students by collecting their trays and separating their leftover food.  Recycling bins can also be found within the eatery. Newell’s also provides reusable kitchenware for students eating in the dining area. For more information check out their <a href="http://www.housing.wisc.edu/dining/hours" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="rhetas"></a>
+<b>Rheta’s Market</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<img src="images/icecream.png" width="20px">
+<br>
+Rheta’s Market is located on the first floor of Chadbourne Residence Hall and provides a variety of foods to choose from on a daily basis. Food areas include the market, Flamingo Run, the Bean and Creamery, and Capital City Pizza Delivery. Within these areas are housemade soups, fresh greens, sandwiches, and much more. Dairy products are sourced locally at UW-Madison’s own Babcock Dairy, and almost all cheeses offered are locally produced. The menu selection also includes grass-fed beef products, and the marinara sauce is made in central production using locally grown tomatoes and basil. Coffee offered at the Bean and Creamery is Fairtrade, and customers will receive a discount for bringing their own mug. Rheta’s Market practices both pre-consumer and post-consumer composting and has recycling bins available. For more information about location hours and menu options, check out their <a href="
+http://www.housing.wisc.edu/dining/hours" target="_blank">website</a>.</div>
+<br><br><br><br>
+<center><img src="images/floralleft.png" width="60px"><span style="font-size: 14pt; font-family: verdana; font-weight: bold">&nbsp;&nbsp;Coffeehouses&nbsp;&nbsp;</span><img src="images/floralright.png" width="60px"></center>
+<br><br>
+
+<a name="aldos"></a>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<b>Aldo’s Cafe</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+This location can be accessed in the north atrium of the Wisconsin Institute for Discovery building. Their selection includes organic teas and some fair trade teas and coffees. This eatery offers local products such as milk and cheese. Some sustainable aspects of this location include providing recycling bins and offering discounts for reusable mugs. Customers may also utilize reusable stirring spoons and rest assured pre-consumer composting is implemented on used coffee beans. For more information about location hours and menu options, check out their <a href="http://aldoscafemadison.com/" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="coffeebytes"></a>
+<b>CoffeeBytes</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+CoffeeBytes is an independently owned coffeehouse run by two UW-Madison alumni. Located in an area of high foot traffic along University Avenue, their unique atmosphere and prime location bring in a variety of customers. CoffeeBytes is known for its delicious fairtrade and organic coffee with its locally sourced milk. The variety of healthy sandwiches/wraps and breakfast items they provide include over 65% vegetarian options. CoffeeBytes works with local vendors to supply all of their products with 25% coming from local producers in Wisconsin.  One quality that separates CoffeeBytes from most coffeehouses is the availability of reusable kitchenware. For customers dining in, they offer reusable silverware and dishware. All diners will receive a refill costing only $1 and use of one’s personal mug allows for a $0.25 discount. For more information, check out CoffeeBytes’ <a href="http://coffeebytes.net/new/" target="_blank">website</a>.</div>
+ 
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="peetsgrainger"></a>
+<b>Peet’s Coffee & Tea (at Grainger School of Business)</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Peet’s is located on the first floor of the Grainger School of Business next to the Capital Café. Their selection includes tea, espresso, and coffee. Not only do they have great specialty drinks, they supply fair trade coffee. In addition, you can try some of their locally sourced bakery goods and bagels. Some sustainable aspects of this location include providing recycling bins and composting their coffee beans. One great quality is their 10 cent discount for using your personal mug. For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/peets.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="peetsmu"></a>
+<b>Peet’s Coffee & Tea (at Memorial Union)</b><br>
+<img src="images/fairtrade.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+Peet’s is located on the first floor of Memorial Union.  Their selection includes tea, espresso and coffee. Not only do they have great specialty drinks, they supply fairtrade coffee. In addition, you can try some of their locally sourced bakery goods and bagels. Some sustainable aspects of this location include providing recycling bins and composting their coffee beans. One great quality is their 10 cent discount for using your personal mug. For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/peets.htm" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="prairie"></a>
+<b>Prairie Fire</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/composting.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/reusable.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<br>
+This location is a coffeehouse and wine bar that can be accessed on the first floor of Union South. Their wine selection includes a variety of local, international, and organic wines.  This eatery offers a variety of delicious tapas, which are half-priced on Thursdays from 5-9pm, and these appetizers are perfect for enjoying with a glass of wine and some friends. Prairie Fire uses local dairy products and provides several vegetarian options for their tapas. Some sustainable aspects of this location include close proximity to communal recycling and composting bins at Union South and offering discounts for reusable mugs. Customers may also utilize reusable silverware, dishware, cups and wine glasses, and we can rest assured this location composts their used coffee beans. For more information about location hours and menu options, check out their <a href="http://www.union.wisc.edu/prairiefire.htm" target="_blank">website</a>.</div>
+<br><br><br><br>
+
+<center><img src="images/floralleft.png" width="60px"><span style="font-size: 14pt; font-family: verdana; font-weight: bold">&nbsp;&nbsp;Other&nbsp;&nbsp;</span><img src="images/floralright.png" width="60px"></center>
+<br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="babcock"></a>
+<b>Babcock Hall Dairy Store</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/fairtrade.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<img src="images/recycling.png" width="20px">
+<img src="images/encreusable.png" width="20px">
+<img src="images/coffee.png" width="20px">
+<img src="images/icecream.png" width="20px">
+<br>
+The Babcock Hall Dairy Plant and Store locally produce dairy products for the university and community. A variety of these dairy products are supplied to the Residential Dining Halls, Unions, and Badger Markets/Cafes. These locally produced products include a flavorful variety of ice creams, milks, and award-winning cheeses. Ice cream can be purchased by the pint, scround (1.75 quarts) or a three-gallon tub. The store offers breakfast options such as pastries, breakfast sandwiches, and fair trade coffee. For lunch, the store offers signature toasted sandwiches and a soup of the day, with a few vegetarian options available. This location also provides recycling bins and a discount for using a personal mug. For more information about location hours and menu options, check out their <a href="http://babcockhalldairystore.wisc.edu/" target="_blank">website</a>.</div>
+
+<br><br><br><br>
+<div style="background-color:#F2E1E5; border-radius:15px; line-height: 2.0em; padding:20px">
+<a name="fhking"></a>
+<b>F.H. King Handouts</b><br>
+<img src="images/local.png" width="20px">
+<img src="images/vegetarian.png" width="20px">
+<br>
+Every Friday at 1:00PM from June to October, you can find F.H. King volunteers distributing locally grown produce to students and UW-Madison community members on East Campus Mall. This opportunity provides campus with a variety of seasonal produce...for free! For more information, check out their <a href="http://fhkingstudentfarm.com/" target="_blank">website</a>.</div>
+
+
+<br><br><br><br><br><br><br><center><a href="http://www.nelson.wisc.edu/" target="_blank"><img src="images/nelson.png" width="200px"></a><br><br>
+These eateries were evaluated by a UW Nelson Institute for Environmental Studies <br>capstone group during the Spring 2014 semester.  </center>
+
+
+
+
+
+
+
+<span class="navigation">
+<h4>
+<a href="../campusfoodmap/reviews.html#menu" > Back to top</a><br>
+<a href="../campusfoodmap/index.html">Back to map</a><br>
+<a href="../campusfoodmap/about.html">About us</a><br>
+<a href="../campusfoodmap/icons.html">What do these symbols mean?</a><br>
+</h4>
+</span>
+			</div>
+					</div>
+					
+			
+	
+		<script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+        <script src="js/leaflet.js"></script>
+		<script src="js/chart.js"></script>
+		<script src="js/jquery-min.js"></script> 
+        <script src="js/EventTarget.js"></script> 
+		<script src="js/ProcessCSV.js"></script> 
+		<script src="lib/jquery-ui/js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="js/main.js"></script>
+		
+		<footer>
+			Developed by <a href="http://rudyomri.com" target="_blank">Masrudy Omri</a>.<br><a href="http://www.wisc.edu" target="_blank">University of Wisconsin-Madison</a>. April 2014.
+		</footer>	
+    
+</body>
+</html>

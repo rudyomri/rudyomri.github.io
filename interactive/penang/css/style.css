@@ -1,0 +1,137 @@
+body {
+	background-color: white;
+	background-image: url(../img/batik.jpg);
+	background-position: center top; 
+	background-attachment:fixed;
+	font-family: Calibri, Verdana, Arial, Helvetica, sans-serif;
+	color: #333;
+}
+h1 {
+	font-size: 1.6em;
+}
+h2 {
+	font-size: 1.1em;
+	font-family: century gothic, helvetica, Arial, sans-serif;
+	letter-spacing: -1px;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: grey;
+	padding: 0;
+	margin: 0;
+}
+
+h3{
+	font-size: 0.8em;
+	font-family: century gothic, helvetica, Arial, sans-serif;
+	font-weight: normal;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+h4{
+	font-size: 0.8em;
+	font-family: century gothic, helvetica, Arial, sans-serif;
+	font-weight: normal;
+	text-align: center;
+	width: 100%;
+	text-shadow: #F0B402 0px 0px 9px;
+	color: white;
+	padding: 0;
+	margin-bottom: 15px;
+}
+p {
+	font-size: 0.7em;
+	font-family: cambria, georgia, serif;
+	background-color: white;
+	color: #333333;
+	text-align: justify;
+	padding: 0;
+	margin: 2px 0 3px;
+	width: 300px;
+}
+
+
+#wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+#map {
+	width: 100%;
+	height: 515px;
+	border: 15px solid rgba(0, 0, 0, 0.6); 
+	-moz-background-clip: padding; 
+	-webkit-background-clip: padding; 
+	background-clip: padding-box; 
+}
+#legend {
+	padding: 3px 5px;
+	width: 100%;
+	background-color: #000000;
+	opacity:0.6;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position:relative;
+	top: 15px;
+	left: 15px;
+	margin-bottom: 60px;
+}
+#legend h3 {
+	margin: 5px 15px;
+	line-height: 1em;
+}
+#legend ul {
+	list-style-type: none;
+	padding-left: 15px;
+}
+#legend li {
+	margin: 3px 0 8px;
+}
+#legend img {
+	margin:0 8px -4px 0;
+}
+.beach {
+	color: #77A816;
+}
+.forest-park {
+	color: #77A816;
+}
+.waterfall{
+	color: #77A816;
+}
+.highland{
+	color: #77A816;
+}
+.food {
+	color: #E31B1B;
+}
+.historical-site {
+	color: #E31B1B;
+}
+.point-of-interest {
+	color: #E31B1B;
+}
+.malls{
+	color: #A31EBA;
+}
+.hotel{
+	color: #1D79F2;
+}
+.resort{
+	color: #1D79F2;
+}
+.transportation{
+	color: #B38300;
+}
+.information-center{
+	color: #B38300;
+}
+.consulate{
+	color: #B38300;
+}
+.beach img,.forest-park img, .waterfall img, .highland img,
+.food img, .historical-site img, .point-of-interest img,
+.malls img, .hotel img, .resort img,
+.transportation img, .information-center img, .consulate img {
+	margin-right: 8px;
+}

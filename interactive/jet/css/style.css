@@ -1,0 +1,110 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family:  Cambria, serif;
+	background-color: #CBB78D;
+	background-position:center center;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	opacity: 0.5;
+}
+
+a:visited{
+	color: #523826;
+}
+
+#map {
+	height: 400px;
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#panel {
+	height: 110px;
+	width: 100%;
+	font-family: Cambria, serif;
+	color: #000;
+	float: left;
+	box-shadow: 5px 5px 25px #000;
+	font-size: 12pt;
+	background-color: #DBCAA4;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0 15px 15px 0;
+	font-size: 9pt;
+}
+
+
+header {
+	margin: 10px 0px 10px;
+	font-family:  Cambria, serif;
+	font-size: 59px;
+	color: #000;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	text-shadow: 2px 2px 4px #000;
+	text-align: right;
+	height: 40px;
+	font-weight: none;
+}
+
+#vcr-controls {
+margin: 8x 0 0 5px;
+padding: 3px;
+font-weight: bold;
+font-size: 14pt;
+}
+
+.vcr {
+float: right;
+opacity: 1;
+text-align: center;
+width: 125px;
+height: 30px;
+}
+
+.vcr:hover {
+opacity: 0.4;
+cursor: pointer;
+}
+
+#temporalSlider {
+width: 200px;
+}
+
+.leaflet-popup-content-wrapper {
+	background-color: rgba(255, 255, 255 ,0.5);
+}
+
+.leaflet-popup-content-wrapper .leaflet-popup-content {
+}
+
+.leaflet-popup-tip-container {
+	opacity: 0;
+}
+
+#hide {
+	margin-top: 1000px;
+	position: fixed;
+}
+
+.lightbox {
+	width: 400px;
+	color: #5E564A;
+	text-align: justify;
+	font-size: 10pt;
+}
+

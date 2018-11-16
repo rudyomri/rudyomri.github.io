@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>UW-Madison: Campus Food Map</title>
+    <meta content="width=device-width" name="viewport">
+	<link href="css/leaflet.css" rel="stylesheet"><!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" href="css/leaflet.ie.css" />
+    <![endif]-->
+	<link rel="stylesheet" href="lib/jquery-ui/css/custom-theme/jquery-ui-1.10.2.custom.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+	
+		
+    
+</head>
+
+<body>
+    <header>
+		<table style="width:700px; margin-left: 30px">
+			<tr>
+				<td><a href="../campusfoodmap/index.html"><img width="135px" src="images/uwmlogo.png"><a></td>
+				<td><h3>Campus Food Map</h3><h6>University of Wisconsin-Madison</h6></td>
+			</tr>
+		</table>
+        
+    </header>
+		
+        <div id="container">
+	
+
+			
+					<div id="map"></div> 	
+					<div id="infoPanel">
+					
+						<div id="legend">
+							<center><div class="left" id="legend2"></div></center>
+							<h4><div class="right" id="legendData"></div></h4></div>
+							
+						<div id="filter"><br>
+						<h4><strong>
+						<a href="../campusfoodmap/about.html" target="_blank">About</a> | 
+						<a href="../campusfoodmap/reviews.html" target="_blank">More info</a>
+						</strong></h4>
+		
+						<h4><strong>Search</strong><br><br>
+						<select id="retrieveOptions"></select><br><br>
+						<h4>
+						<form>
+							<input type="checkbox"  id="typeJ" class="chb" checked><span class="typeJ"> See all</span><br>
+							
+							
+							<br>
+							
+					
+					
+							<strong>Types of eateries</strong><br><br>
+							<input type="checkbox" id="typeL"><span class="typeL"> Restaurants </span><br>
+							<input type="checkbox" id="typeM"><span class="typeM"> Market & cafes </span><br>
+							<input type="checkbox" id="typeO"><span class="typeO"> Dining halls </span><br>
+							<input type="checkbox" id="typeP"><span class="typeP"> Other </span><br>
+							<input type="checkbox" id="typeH"><span class="typeH"> <img src="images/coffee.png" width="15px"> Coffee </span><br>
+							<input type="checkbox" id="typeI"><span class="typeI"> <img src="images/icecream.png" width="15px"> Ice cream </span><br><br>
+							<strong>Sustainable options</strong><br><br>
+							
+							<input type="checkbox"  id="typeA"><span class="typeA"> <img src="images/local.png" width="15px"> Local food </span><br>
+							<input type="checkbox" id="typeB"><span class="typeB"> <img src="images/fairtrade.png" width="15px"> Fairtrade </span><br>
+							<input type="checkbox" id="typeC"><span class="typeC"> <img src="images/vegetarian.png" width="15px"> Vegetarian </span><br>
+							<input type="checkbox" id="typeD"><span class="typeD"> <img src="images/composting.png" width="15px"> Composting </span><br>
+							<input type="checkbox" id="typeE"><span class="typeE"> <img src="images/recycling.png" width="15px"> Recycling </span><br>
+							<input type="checkbox" id="typeF"><span class="typeF"> <img src="images/reusable.png" width="15px"> Reusable kitchenware</span><br>
+							<input type="checkbox" id="typeG"><span class="typeG"> <img src="images/encreusable.png" width="15px"> Reusable mug discount </span>
+							
+							
+							
+							
+							
+							
+						</form> </h4><h4>
+						<span style="font-size:7pt"><i><a href="../campusfoodmap/icons.html" target="_blank">What do these symbols mean?</a></i> </span>
+						</h4>
+						</div>
+						
+						
+						
+						
+						
+						<br>
+						<!-- DO NOT REMOVE THIS LINE! -->
+						<h4>Map by <a href="http://rudyomri.com" target="_blank">Masrudy Omri</a>.<br><br><br><br> </h4></div>
+						<!-- DO NOT REMOVE THIS LINE! -->
+						
+					
+					
+					
+				
+					
+				
+				
+				
+				
+			
+		
+		
+	</div>
+	
+		<script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+        <script src="js/leaflet.js"></script>
+		<script src="js/chart.js"></script>
+		<script src="js/jquery-min.js"></script> 
+        <script src="js/EventTarget.js"></script> 
+		<script src="js/ProcessCSV.js"></script> 
+		<script src="lib/jquery-ui/js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="js/main.js"></script>
+		
+		</div>
+    
+</body>
+</html>

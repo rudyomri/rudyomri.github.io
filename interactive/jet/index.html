@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Jet's Journey</title>
+    <meta content="width=device-width" name="viewport">
+	<link type="text/css" rel="stylesheet" href="js/featherlight-1.3.4/release/featherlight.min.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<link href="css/leaflet.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        Jet's Journey
+    </header>
+	
+	<div id="panel">
+		<table width="100%">
+		<tr>
+		<td width = "400px" style="padding:15px 15px 15px 25px;">
+			<!-- i: <span id="id"></span><br>
+			x: <span id="x"></span><br> -->
+			<b>Date: </b><span id="date"></span><br>
+			<b>Time: </b><span id="time"></span><br>
+			<b>Coordinates:</b> <span id="xy"></span><br>
+			<b>Range: </b><span id="range"></span><br>
+			
+		</td>
+		<td width = "800px" style="padding:15px 15px 15px 15px;">
+			<span id="vcr-controls">
+				<a class="vcr back-full"> Restart</a> 
+				<a class="vcr play">Play</a> 
+				<a class="vcr pause">Pause</a>
+				<a class="vcr step-full">End</a>
+				<a class="vcr full-route">Full <br>route</a>
+				<a class="vcr" href="#" data-featherlight="#info" data-featherlight-variant="fixwidth">About</a>
+				
+				
+			</span>
+		</td>
+		<!-- <td width = "0px">
+			<span id="temporalSlider"></div>
+		</td> -->
+		</tr>
+		</table>
+	</div>
+		
+       
+	<div id="map"></div> 	
+	<div id="footer"><a href="http://rudyomri.com" target="_blank">Rudy Omri</a>. Winter 2016. InfoGraphics Lab, University of Oregon.</div>
+	<div id="hide">
+		<div class="lightbox" id="info" width="500px"><span style="font-size: 40pt; font-family: French Script MT; line-height: 60%;">H</span>ome at last. Jet, a mule deer doe, has finally arrived on her winter range in Wyoming's Red Desert. Most of her herd have already made it to winter range although there are still a few stragglers as far north as Pinedale and the Prospect Mountains. This fall, she traveled approximately 130 miles in 38 days. So began the fall migration of one individual deer that scientists from the University of Wyoming captured last spring. During the capture, they fitted the doe with a GPS collar that updates coordinates to a website every few hours. They named her “Jet” and she’s been the subject of Twitter and Facebook updates all year.
+“Jet” is just one of an estimated 5,000 deer that annually migrate from the highlands of the Hoback Basin region in summer to the scrubland of the Red Desert in winter. It’s the longest known migration of mule deer in the United States, and probably the most studied.
+For the doe, the 50-some miles she had traveled were marked by mountains, rivers, plains, and dozens of man made obstacles like fences and roads. To humans, the area is a patchwork of United States Forest Service land, Bureau of Land Management parcels, state and private land. <a href="http://www.wyofile.com/wildlife-migration-path-policy/" target="_blank">Source</a>.</div>
+	</div>
+	
+	
+	<script src="js/featherlight-1.3.4/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script src="js/leaflet.js"></script>
+	<script src="js/jquery-min.js"></script> 
+	<script src="js/EventTarget.js"></script> 
+	<script src="lib/jquery-ui/js/jquery-ui-1.10.1.custom.min.js"></script>
+	<script src="js/main.js"></script>
+
+    
+</body>
+</html>

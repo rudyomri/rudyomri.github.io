@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Penang: Pearl of the Orient</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</head>
+<body>
+	<div id="wrapper">
+	
+		<h1><center><img src="img/header.png"/></center></h1>
+		<h4>Penang is an island off the northwestern coast of the Malaysian peninsula. 
+		It is the country's second largest city, popular with tourists because of its beaches. The island's interior consists of a densely forested interior while the coast is punctuated by a series of bays and beaches connected by a winding road. Lining Penang's coastline are abundant seafront lodgings ranging from simple budget-friendly A-frame huts to sprawling five-star luxury ventures with guestrooms that face the ocean and offer breathtaking views. 
+		A culture that mixes Malay, Chinese and East Indian traditions spices local food, architecture and traditions. An English-speaking population, legacy of a British colonial past, makes getting around easy.</h4>
+		<div id="map"></div>  <!-- map is placed within this div -->
+		<div id="legend">
+		<table style='table-layout:fixed' border="0" width="100%" CELLPADDING="2" CELLSPACING="2">
+
+<tr><td width= 20%><h2 class='beach'>Natural Attraction</h2></td>
+<td width= 20%><h3><img src="img/beach.png"/>Beach</h3></td>
+<td width= 20%><h3><img src="img/forest-park.png"/>Forest/Park</h3></td>
+<td width= 20%><h3><img src="img/waterfall.png"/>Waterfall</h3></td>
+<td width= 20%><h3><img src="img/highland.png"/>Highland</h3></td>
+</tr>
+
+<tr><td width= 20%><h2 class='food'>Cultural Attraction</h2></td>
+<td width= 20%><h3><img src="img/food.png"/>Food</td>
+<td width= 20%><h3><img src="img/historical-site.png"/>Historical Sites</h3></td>
+<td width= 20%><h3><img src="img/point-of-interest.png"/>Places of Interest</h3></td>
+</tr>
+
+<tr><td width= 20%><h2 class='malls'>Economic Attraction</h2></td>
+<td width= 20%><h3><img src="img/malls.png"/>Shopping Malls</h3></td>
+</tr>
+
+<tr><td width= 20%><h2 class='hotel'>Accommodation</h2></td>
+<td width= 20%><h3><img src="img/hotel.png"/>Hotel</h3></td>
+<td width= 20%><h3><img src="img/resort.png"/>Resort</h3></td>
+</tr>
+
+<tr><td width= 20%><h2 class='consulate'>Miscellaneous</h2></td>
+<td width= 20%><h3><img src="img/transportation.png"/>Transportation</h3></td>
+<td width= 20%><h3><img src="img/information-center.png"/>Tourist Information Center</h3></td>
+<td width= 20%><h3><img src="img/consulate.png"/>Consulate</h3></td>
+</tr>
+
+
+
+</table> </div>
+<h3><center><br>Masrudy Omri | Geography 572 | Fall 2012 | University of Wisconsin-Madison</center></h3>
+	</div><!-- end wrapper -->	
+	<script type="text/javascript">
+		
+	
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 13,
+			center: new google.maps.LatLng(5.443757,100.262403),
+			mapTypeId: google.maps.MapTypeId.TERRAIN
+		});
+
+		// populate an array with our data
+		var locations = [
+			["Beach",5.460653,100.214599,"Teluk Bahang","Teluk Bahang, known as Bay of the Glowing Amber is situated at the upper northern tip of our Penang island. Once a quiet fishing village, now it is as busy as Batu Ferringhi."],
+			["Beach",5.467461, 100.285893,"Tanjung Bungah","Literally meaning Flower Cape, Tanjung Bungah is a seaside suburb located between Gurney and Batu Feringghi. Built amongst its spectacular natural landscape are world-class hotels and resorts, offering guests the utmost comfort and luxury in an idyllic location."],
+			["Beach",5.47411, 100.246766,"Batu Ferringhi","For experiencing a memorable Malaysian panorama, a visit to the Batu Ferringhi Beach is essential. Enjoy a multitude of spine- tingling ecstasy from wind-surfing, parasailing to canoeing while you chill out on the beach."],
+			["Forest/Park",5.450528, 100.218118,"Penang National Park","Penang National Park is the world’s smallest national park. Within the park are well-marked trails that lead into the jungle and to the bays around; it contains about 410 species of flora and 143 species of fauna ranging from snakes, macaques and leaf monkeys to otters, hawksbill turtles and dolphins."],
+			["Forest/Park",5.440024, 100.288878,"Penang Botanical Garden","The beautiful grounds and the tranquility of the gardens have long been enjoyed and admired by millions of visitors. Besides being the arboretum living plants specimens, it is also the seat of botanical conservation, education and training. The Gardens also play an important role in the field of horticulture and landscaping development."],
+			["Waterfall",5.453855,100.240963,"Chin Farm Waterfall","Soothing, scenic waterfall streams by the beach."],
+			["Waterfall",5.403922,100.223636,"Titi Kerawang Waterfall","Located along the stretch of Teluk Bahang road, the Titi Kerawang Waterfall is another popular place for both locals and tourists looking for an escape from city life. Surrounded by the rainforest and green lush nature, the waterfall can be reached by taking an approximate 100 meters walk from the main road."],
+			["Highland",5.426294,100.269244,"Penang Hill","ituated about 2750 feet above sea level on this northern part of Penang, this oldest hill resort and the first in Malaysia has cool, unpolluted air and historical feature."],
+			["Hotel",5.432953,100.30665,"Berjaya Georgetown","Offers you affordable accommodation for leisure or business trip as well as entertainment facilities that make your stay an unforgettable experience."],
+			["Hotel",5.467333,100.288717,"Crown Jewel","Beautifully decorated rooms and a homely atmosphere of this hotel make it a suitable place to lodge for business and leisure travelers alike. "],
+			["Hotel",5.4220011,100.334534,"Continental","One of the best spectacular beachfront resorts on the charming island of Penang."],
+			["Hotel",5.422043,100.325397,"The Sheraton Penang","Serving the travelers with a warm smile and pampering them with an all-inclusive range of top-notch facilities"],
+			["Hotel",5.420299,100.332872,"Oriental","A luxury hotel offering world class service, luxury spa treatments, dining and leisure facilities."],
+			["Hotel",5.412278,100.328398,"Grand Continental","The epitome of modern living at its finest. The contemporary blend of design is seamlessly integrated into its historical heritage making it a prime address in the heart of Penang."],
+			["Hotel",5.414061,100.325705,"Sunway","Experience the world-class service and facilities that blends with warm Malaysian Hospitality. An established grand hotel, tastefully decorated rooms nestled in Georgetown."],
+			["Hotel",5.418956,100.323031,"Garden Inn","Providing good, clean, secure accommodation, especially for families, this hotel is close to entertainment areas and numerous delicious food outlets within 5 minutes walking distance."],
+			["Hotel",5.477292,100.269727,"Golden Sands Hotel","Enjoy the full luxury with friendly, graceful and refined services. Savour the unique brand of hospitality."],
+			["Hotel",5.475979,100.250157,"Lone Pine Hotel","Lone Pine welcomes you with warm shades, soft beds, deep sofas and comfortable spaces that will make you feel at home."],
+			["Hotel",5.473084,100.246969,"Holiday Inn","Providing modern yet homely accommodation, excellent business facilities as well as refined personal service, the hotel is the perfect destination for comfortable and convenient living."],
+			["Hotel",5.471974,100.246004,"Parkroyal Penang","Offers an all-new hospitality experience in Batu Ferringhi It is the ideal address for travelers who like the excitement of a buzzing seashore experience."],
+			["Resort",5.467258,100.2892,"Sandy Bay Paradise","The warm smile that greets you holds the promise of luxurious rooms, impressive facilities and sumptuous world cuisine."],
+			["Resort",5.465897,100.241101,"The Bayview Beach Resort","Be it leisure or business, Sky Hotel provides all the amenities and services to make you feel at home away from home."],
+			["Resort",5.458543,100.216346,"Penang Mutiara Beach Resort"," Located adjacent to one of the most beautiful beaches in Malaysia, providing modern comforts for a family vacation."],
+			["Food",5.434828,100.314422,"Gurney Drive","Perhaps one of Asia's most famous food scenes, Gurney Drive in Penang is the pride of Malaysians everywhere. Ranging from seafood and 'steamboat' places to steakhouses and familiar chains from home, you won't have to worry about leaving hungry."],
+			["Food",5.416841,100.331971,"Chinatown","The streets of Chinatown come alive at night with carts selling noodles, dumplings, and treats on skewers. The food is so authentic that English is rarely found on the signs!"],
+			["Food",5.421148,100.334457,"Red Garden Café","The Red Garden is a little grungier and more hectic, but the convenient location on Jalan Penang is worth the extra effort. An array of carts and counters serve up excellent fare for prices cheaper than those found in restaurants. "],
+			["Food",5.46449,100.291319,"Khaleel Restaurant","Healthy Malaysian Indian food served on banana leaves can be found here. When you hear blaring Hindi music from speakers on the street you are in the right place!"],
+			["Food",5.415394,100.342104,"Weld Quay Restaurant","Looking for cheap and good seafood? Try out this modest eatery opposite Penang Port. They serve a variety of seafood: lobsters, shrimps, crabs, fishes at affordable price."],
+			["Historical Site",5.4220077,100.344012,"Fort Cornwallis","Fort Cornwallis - named after the Governor-General in Bengal, Charles Cornwallis. Although built for defense by design, throughout its existence, Fort Cornwallis served more as an administrative centre for the British, having survived without much threat of enemy attacks. "],
+			["Historical Site",5.42208,100.336294,"Penang Museum","Divided into galleries dedicated to Penang's historical communities, as well as particular historical events that took place in Penang, the museum houses a fine collection of old photographs, maps, historical documents, Chinese furniture, embroidery, costumes and other historical relics."],
+			["Historical Site",5.419471,100.344269,"Clock Tower","The Queen Victoria Memorial Clocktower at King Edward's Place is one of the most recognizable icons of Penang Island. It doesn't matter that there is more than one clock tower in Penang - it is such an icon in Penang that when you say The Clocktower, Penangites know which one."],
+			["Historical Site",5.4220884,100.341664,"Padang Kota Lama","Padang Kota Lama, or simply called The Padang, is the parade ground and playing field created by the British colonials in the civic district of George Town."],
+			["Point of Interest",5.447738,100.215329,"Penang Butterfly Farm","The Penang Butterfly Farm is more than just a tourist attraction. It is set up as a 'live museum' to educate the public as well as a research centre to develop breeding methods. The visitors finding themselves surrounded by a myriad of fluttering butterflies within a seemingly natural setting, is likely to think himself in a sort of enchanted wilderness, bejeweled with the colorful gems of creation."],
+			["Point of Interest",5.414977,100.217102,"Tropical Fruit Farm","Over the years, the orchard has acquired many rare and exotic fruit trees from the region as well as from far-flung corners of the globe such as Central and South America, Central Africa, India, the Middle East, the Caribbean, the Pacific Islands etc. Today the orchard boasts of a collection of over 250 different species and the list is still growing. "],
+			["Point of Interest",5.465558,100.292515,"Penang Toy Museum","Penang Toy Museum bills itself as the world’s largest toy museum. It is home to over 100,000 dolls, trains and other collectibles and has earned a spot in the Malaysian Book of Records as the country’s first toy museum, with the largest toy and figurine collection."],
+			["Point of Interest",5.398277,100.273084,"Kek Lok Si Temple","The Kek Lok Si Temple is a Buddhist temple situated in Air Itam in Penang and is one of the best known temples on the island. This pagoda combines a Chinese octagonal base with a middle tier of Thai design, and a Burmese crown; reflecting the temple's embrace of both Mahayana and Theravada Buddhism."],
+			["Point of Interest",5.431685,100.313825,"Wat Chayamangkalaram","The architecture is authentic down to the last bit of gold paint on the pagodas - so much so that one feels transported to another place and time when wandering about the sprawling grounds. Like the Burmese temple across the road, one is likely to encounter mythical beings and religious icons which dot the grounds."],
+			["Point of Interest",5.41682,100.337039,"Kapitan Keling Mosque","The Kapitan Keling Mosque is arguably the best known mosque in Penang. The name kapitan keling is used to denote the headman or leader of the South Indian Muslim community. The term keling is derived from the ancient Hindu kingdom on the Coromandel coast of South India, and the local Hokkien community corrupts the word to derive keling-an for Indians in general, particularly those from South India "],
+			["Point of Interest",5.414326,100.337225,"Khoo Kongsi","Khoo Kongsi is a grand temple that shines brightly along Lebuh Cannon. It was built to serve as a clan-house for ember of the Khoo family. The walls, pillars and roof are richly decorated with intricate carvings bearing the marks ofmaster craftsmen from China and the beams are made from wood of the finest quality."],
+			["Malls",5.433049,100.306875,"Midlands One-Stop","Midlands One Stop is a shopping centre in Pulau Tikus, Penang. When it opened for business in the mid 1990's, it was one of the more upmarket malls in Penang."],
+			["Malls",5.414192,100.329615,"KOMTAR","Komtar is a multipurpose complex consisting of retail outlets, transportation hub and administrative offices for the Penang State Government. Sixth tallest building in Malaysia."],
+			["Malls",5.437727,100.309611,"Gurney Plaza","Gurney Plaza has more than 400 brands including a 12-hall cineplax and fitness center that spread over 836,000 sq ft. Gurney Plaza offers an array of goods and services to please and pamper the needs of every shopper"],
+			["Malls",5.426761,100.321008,"Gurney Paragon","Set to be the new premier shopping, entertainment, office and luxury residential address in Penang. It is a mixed development comprising a 700,000 sq ft shopping mall, an office tower, and two high-end residential towers. It is located on Gurney Drive, a beachfront esplanade that enjoys stunning ocean views and cool sea breezes"],
+			["Malls",5.421127,100.325324,"Penang Plaza","One of the oldest malls in Penang, the plaza is a three-storey podium topped by a seven-storey office block. The Penang Plaza underwent a major revamp in 2009-2010, which resulted in the currently modern and sophisticated finishing and interior."],
+			["Malls",5.41479,100.331487,"Prangin Mall","Prangin Mall is located beside Komtar, Penang, Malaysia. Located at the town central of Penang, under the management of Prangin Mall Merchant Association."],
+			["Transportation",5.414481,100.330516,"KOMTAR Bus Terminal","Interstate bus terminal, main hub for interstate buses that going to the capital, Kuala Lumpur."],
+			["Transportation",5.403511,100.333829,"Pengkalan Weld (Fort Weld)","Weld Quay, or Pengkalan Weld, is a coastal road on the east side of George Town. It was built at the turn of the 20th century, following the land reclamation of the eastern shore that took place between 1881 and 1904 that created a new coastal land for a deeper port."],
+			["Transportation",5.415015,100.343358,"Penang Port","Penang Port is unique, in that it is the only port in Malaysia that runs a ferry service, linking Georgetown on Penang Island with Butterworth on the peninsula."],
+			["Transportation",5.414769,100.342077,"Weld Quay Bus Terminal","Serves as secondary public transportation hub next to Komtar bus terminal."],
+			["Information Center",5.414948,100.336682,"Tourist Information Center Lebuh Cannon","Provides information service for tourists."],
+			["Information Center",5.419714,100.344544,"Tourist Information Center Georgetown","Provides information service for tourists."],
+			["Consulate",5.432804,100.304483,"Embassy of Indonesia","Embassy of Indonesia."],
+			["Consulate",5.424708,100.305578,"Embassy of Thailand","Embassy of Thailand."],
+			["Consulate",5.426235,100.322299,"Embassy of Japan","Embassy of Japan."],
+			["Consulate",5.420136,100.340768,"Embassy of Great Britain","Embassy of Great Britain."]
+
+		];
+
+		var infowindow = new google.maps.InfoWindow();
+
+		var marker, i;
+					
+		for (i = 0; i < locations.length; i++) 
+		{
+			var iconImage, heading;
+			
+			switch(locations[i][0]) {
+				case "Beach":	
+					iconImage = "img/beach.png";
+					heading = "<h2 class='beach'><img src="+iconImage+" />" +locations[i][3]+"</h2>";
+					break;
+				case "Forest/Park":	
+					iconImage = "img/forest-park.png";
+					heading = "<h2 class='forest-park'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Waterfall":
+					iconImage = "img/waterfall.png";
+					heading = "<h2 class='waterfall'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Highland":
+					iconImage = "img/highland.png";
+					heading = "<h2 class='highland'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Food":	
+					iconImage = "img/food.png";
+					heading = "<h2 class='food'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Historical Site":	
+					iconImage = "img/historical-site.png";
+					heading = "<h2 class='historical-site'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Point of Interest":
+					iconImage = "img/point-of-interest.png";
+					heading = "<h2 class='point-of-interest'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Hotel":
+					iconImage = "img/hotel.png";
+					heading = "<h2 class='hotel'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Resort":	
+					iconImage = "img/resort.png";
+					heading = "<h2 class='resort'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Transportation":	
+					iconImage = "img/transportation.png";
+					heading = "<h2 class='transportation'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Information Center":
+					iconImage = "img/information-center.png";
+					heading = "<h2 class='information-center'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Consulate":
+					iconImage = "img/consulate.png";
+					heading = "<h2 class='consulate'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Malls":
+					iconImage = "img/malls.png";
+					heading = "<h2 class='malls'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+			}
+			marker = new google.maps.Marker({
+				icon: iconImage,
+				position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+				map: map
+			});
+			google.maps.event.addListener(marker, 'click', (function(marker, i, heading) {
+				return function() {
+					markerContent =	heading+"</h2><p><b></b> "+ locations[i][4]+"</p>";
+					infowindow.setContent(markerContent);
+					infowindow.open(map, marker);
+				}
+			})(marker, i, heading));  // end marker click function
+		}; // end for loop		
+	</script>
+	
+</body>
+</html>

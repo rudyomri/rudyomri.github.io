@@ -1,0 +1,112 @@
+html { 
+	height: 100% 
+}
+
+body{
+	margin:0px; 
+	padding:0px;
+	height:100%;
+	position: relative;
+}
+
+a:link, a:visited{
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #8be0d2;
+}
+
+#map{
+	height: 100%;
+}
+
+#infobox{
+	z-index: 30;
+	position: fixed;
+	height: 100%;
+	width: 275px;
+	text-align: right;
+	background-color: rgba(0,0,0,0.3);
+	float: left;
+	right: 0;
+	padding: 25px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;    
+	box-sizing: border-box;        
+}
+
+#h1{
+	font-size: 30px;
+	color: rgba(150,150,150,1);
+	font-family: Helvetica, sans-serif;
+}
+
+p{
+	font-size: 5px;
+	color: rgba(150,150,150,1);
+	font-family: Helvetica, sans-serif;
+}
+
+#sub{
+	font-size: 14px;
+	color: rgba(150,150,150,1);
+	font-family: Helvetica, sans-serif;
+}
+
+#taxi-title, #datetime-title{
+	font-size: 16px;
+	color: rgba(255,255,255,1);
+	font-family: Helvetica, sans-serif;
+}
+
+#taxi-count, #date-count, #time-count{
+	font-size: 18px;
+	color: rgba(150,150,150,1);
+	font-family: Helvetica, sans-serif;
+}
+
+#hex-count{
+	font-size: 30px;
+	color: rgba(255,255,255,1);
+	font-family: Helvetica, sans-serif;
+}
+
+.hexbin-hexagon {
+    stroke: rgba(255, 255, 255, 1);
+    stroke-width: 1px;
+    cursor: pointer;
+}
+
+.hexbin-hexagon:hover {
+    stroke: rgba(229, 252, 58, 1);
+    stroke-width: 8px;
+}
+
+#sep{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+button {
+    background-color: rgba(188, 188, 188, 0.2);
+    color: white;
+    border:none;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 135px;
+    margin-top: 5px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: rgba(188, 188, 188, 0.4);
+    color: white;
+}
+
+
+@font-face { font-family: Helvetica; src: url('Helvetica.ttf'); }  

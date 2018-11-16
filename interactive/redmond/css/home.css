@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+html {
+    height: 100%;
+	overflow-y: hidden;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+a{
+	text-decoration: none;
+	font-weight: none;
+	color: #800026;
+	cursor: pointer;
+}
+
+p {
+	font-weight: none;
+	font-family: Weebly, 'arial';
+}
+
+a:hover{
+	color: #4d4d4d;
+}
+
+body {
+	background: #4d4d4d;
+	height: 100%;
+	font-family: Weebly, Arial, Helvetica, sans-serif;
+
+}
+
+#wrapper{
+	width: 480px;
+	height: 100%;
+	padding: 150px 20px 20px 20px;
+	background: #800026;
+	position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+	
+}
+
+img {
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 10px;
+}
+
+header {
+
+	font-family: Bebas, sans-serif;
+	text-align: center;
+	color: white;
+	margin-left: 0px;
+	margin-top: 160px;
+	width: 960px;
+	height: 100%;
+}
+
+
+h1{
+	font-size: 36pt;
+	text-align: left;
+	font-weight: normal;
+	color: #000;
+	font-family: Bebas, 'arial', sans-serif;
+}
+
+h2{
+	font-size: 25pt;
+	text-align: left;
+	font-weight: normal;
+	color: #000;
+	font-family: Bebas, 'arial', sans-serif;
+}
+
+h3{
+	font-size: 18pt;
+	text-align: right;
+	margin-bottom: 3px;
+	font-weight: normal;
+	font-family: Bebas, 'arial', sans-serif;
+}
+
+h4{
+	font-size: 12pt;
+	text-align: left;
+	font-weight: normal;
+	font-family: Bebas, 'arial', sans-serif;
+}
+
+@font-face { font-family: LiberationSans; src: url('../fonts/LiberationSans-Regular.ttf'); } 
+@font-face { font-family: VanLose; src: url('../fonts/Vanlose_SimpleType.otf'); } 
+@font-face { font-family: Roboto; src: url('../fonts/Roboto-Light.ttf'); } 
+@font-face { font-family: Weebly; src: url('../fonts/weblysleekuisl.ttf'); } 
+@font-face { font-family: Winter; src: url('../fonts/WinterthurCondensed.ttf'); } 
+@font-face { font-family: Eurocaps; src: url('../fonts/EUROCAPS.ttf'); } 
+@font-face { font-family: Bebas; src: url('../fonts/BebasNeue.otf'); } 
+@font-face { font-family: Probert; src: url('../fonts/Probert.otf'); } 
+@font-face { font-family: Neuropolitical; src: url('../fonts/neuropolitical rg.ttf'); } 

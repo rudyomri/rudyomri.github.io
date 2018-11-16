@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>WALKVIZ:REDMOND</title>
+    <meta content="width=device-width" name="viewport">
+	<!-- <link href="css/leaflet.css" rel="stylesheet">
+ 	
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script> -->
+	
+	<link type="text/css" rel="stylesheet" href="js/featherlight-1.3.4/release/featherlight.min.css" />
+	<link rel="stylesheet" href="js/leaflet/dist/leaflet.css" />
+	<link rel="stylesheet" href="js/leaflet.measure/leaflet.measure.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/leaflet/build/deps.js"></script>
+	<script src="js/leaflet/debug/leaflet-include.js"></script>
+	<script src="js/leaflet.measure/leaflet.measure.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+<!-- 	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
+	
+	<script type="text/javascript">
+		$(window).load(function(){
+			$('#loader').fadeOut(1000);
+		})
+	</script>
+	
+</head>
+
+<body>
+	<div id="loader"></div>
+	<div id="container">
+		<div id="map"></div> 	
+		<header><h1>WALKVIZ:REDMOND</h1>
+		<h2>GEOVISUALIZATION OF WALKABILITY IN REDMOND, OR</h2>
+		<h4><a href="../redmond/overview.html" onclick="return newWin(this.href)">OVERVIEW</a> / 
+			<a href="#" data-featherlight="#aboutinfo" data-featherlight-variant="fixwidth"> ABOUT</a> / <a href="#" onclick="toggle_visibility('hiddenPanel');">MORE TOOLS</a></h4>
+		</header>
+		<div id="panels">
+			
+				
+			
+			
+			<div id="infoPanel2">
+			
+				<div class ="scorePanel">
+					
+					<h3>explore walkability</h3>
+					
+					
+					
+					<!-- COLOR RAMP FOR SCORES -->
+					
+					<span id="ramp">
+						<img src="images/ColorRamp.jpg">
+						<br>
+						<span style="font-size: 7pt; float:left;margin-left:5px;">1</span>
+						<span style="font-size: 7pt; float:right;margin-right: 0px;">10</span> 
+						<span style="font-size: 7pt; margin-left: 25px;">Score</span> 
+					</span>
+					<span id="slider"> 
+						<br>
+						<span style="font-size: 7pt; float:left;margin-left:5px;">0%</span>
+						<span style="font-size: 7pt; float:right;margin-right: 0px;">100%</span> 
+						<span style="font-size: 7pt; margin-left: 15px;">Opacity</span> 
+					</span><br>
+					<div id="scoreBoard">
+						<p id="scoretitle">WALKABILITY<br>SCORE</p>
+							<p id="score"></p>
+					</div>
+					<!-- OPACITY CONTROL SLIDER FOR HEX -->
+					
+					
+					<br>
+					<br>
+					
+					<!-- SCORE DISPLAY MINI-PANEL -->
+					
+					<!-- <div style="width:210px;height:60px;background: #ABABAB;padding: 5px; margin-left: 5px;margin-top: -15px; ">
+						
+					</div> -->
+					
+				</div>
+
+				
+				<div class ="buttonsPanel">
+				<p> Select any of the walkability factors below to switch the hexagon display. Click on the <img src="images/info.png" class="infohover"> icon to read more on the methods of 
+				 GIS analysis for that particular factor.</p>
+				 <br>
+					<!-- WALKABILITY FACTOR LINK BUTTONS -->
+					
+					<a href="#" data-featherlight="#dwellinginfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="dwelling">Dwelling Density </p></span><br>
+					
+					<a href="#" data-featherlight="#sidewalkinfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="sidewalk">Sidewalk Density </p></span><br>
+					
+					<a href="#" data-featherlight="#streetinfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="street">Street Connectivity </p></span><br>
+
+					<a href="#" data-featherlight="#serviceinfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="service">Service Proximity </p></span><br>
+					
+					<a href="#" data-featherlight="#terraininfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="terrain">Terrain Convenience </p></span><br>
+
+					<a href="#" data-featherlight="#safetyinfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="safety">Perceived Safety </p></span><br>
+
+					<a href="#" data-featherlight="#landuseinfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="landuse">Land Use Mix </p></span><br>
+
+					<a href="#" data-featherlight="#culdesacsinfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="culdesacs">Cul de Sacs Density </p></span><br>
+
+					<a class="btn btn-warning btn-block btn-sm" href="#" data-featherlight="#totalinfo" data-featherlight-variant="fixwidth"><img src="images/info.png" class="infohover" style="margin-bottom: -4px;"></a>
+					<span id ="factorbutton"><p id="total">TOTAL WALKABILITY </p></span><br>
+
+					<br>
+				
+				</div>
+			</div>
+			
+			
+			<div id="hiddenPanel">
+				<div class="textPanel">
+					<p id = "welcome"><img src='images/redmondheader.jpg' width='100%'><br><br>Walkability offers surprising benefits to our health, the environment, our finances, and our communities. This
+					project intends to assess the walkability potential within the city limit of Redmond, Oregon. 
+					<br><br>This web map interface allows you to interactively visualize how walkable a particular spot in Redmond is. Click on more tools link above to 
+					toggle layers, measure walking distances and display points of interest on the map.
+					<br><br>
+					It is essential to normalize the input factors as different factors have different units or scales. Thus for integration, visualization and comparison purposes, hexagonal grid is used to ensure a uniformity across all walkability factors. 
+					</p>
+					<p id = "factordesc"></p>
+				</div>
+			</div>
+			
+			
+			
+			<div id="infoPanel1">
+				<!-- IMGMAP FOR REGION ZOOM IN -->
+				<h3>zoom to region</h3>
+				<img src="images/LocatorMap.png" style="margin-top: -10px" alt="" usemap="#locator" />
+				<map name="locator" id="locator">
+					<area id="North" alt="" title="" href="#" shape="poly" coords="66,14,113,14,109,44,63,38" />
+					<area id="Downtown" alt="" title="" href="#" shape="poly" coords="62,53,125,54,118,74,118,80,55,79" />
+					<area id="West" alt="" title="" href="#" shape="poly" coords="28,82,76,91,71,114,30,113" />
+					<area id="South" alt="" title="" href="#" shape="poly" coords="48,119,94,121,82,149,41,139" />
+					<area id="East" alt="" title="" href="#" shape="poly" coords="104,89,142,89,140,112,98,110" />
+					<area id="Home" alt="" title="" href="#" shape="poly" coords="97,142,163,151,158,167,97,168" />
+				</map>
+				
+				<!-- WALKABILITY FACTORS PANELS -->
+				<h3>measure distance</h3>
+				Click <a href="#" data-featherlight="#measureinfo">here</a> to learn about how to <br> measure walking distance on the map.
+				<br><br>
+				
+				<h3>toggle layers</h3>
+				<!-- TOGGLE HEXAGONS/CITY LIMIT -->
+				<input type="checkbox" id="CityLimit" checked><span class="CityLimit" style="margin-right:20px"> On/Off City Limit </span>  <br>
+				<input type="checkbox" id="toggleHex" checked> On/Off Hexagons<br><br>
+			
+
+				<!-- NAV FOR REGION ZOOM IN -->
+				<!-- <a class="btn btn-default btn-block" id="Home">City Limit</a>
+				<a class="btn btn-default btn-block" id="Downtown">Downtown</a>
+				<a class="btn btn-default btn-block" id="North">North</a>
+				<a class="btn btn-default btn-block" id="South">South</a>
+				<a class="btn btn-default btn-block" id="East">East</a> 
+				<a class="btn btn-default btn-block" id="West">West</a> -->
+			
+				<!-- POINTS OF INTEREST -->	
+				<h3>points of interest</h3>
+				<form>
+				<table width="220px">
+				<tr>
+					<input type="checkbox"  id="All" checked><span class="All"> All points</span><br></tr>
+				<tr><td>
+					<input type="checkbox"  id="Education"><span class="Education">  Education </span></td><td>
+					<input type="checkbox" id="Facilities"><span class="Facilities"> Facilities </span></td></tr>
+				<tr><td>
+					<input type="checkbox" id="FireStation"><span class="FireStation"> Fire Station </span></td><td>
+					<input type="checkbox" id="PoliceStation"><span class="PoliceStation"> Police Station </span></td></tr>
+				<tr><td>
+					<input type="checkbox" id="Hospital"><span class="Hospital"> Hospital </span></td><td>
+					<input type="checkbox" id="Recreation"><span class="Recreation"> Recreation </span></td><td>
+				</table>
+				</form> 	
+				<br>
+				
+				<!-- <h3>walking neighborhood</h3> -->
+				<!-- TOGGLE HEXAGONS/CITY LIMIT -->
+				<!-- <input type="checkbox" id="10min"> 10-minute walking neighborhood <br>
+				<input type="checkbox" id="15min"> 15-minute walking neighborhood<br>
+				<input type="checkbox" id="10min"> 20-minute walking neighborhood<br><br> -->
+				
+		
+			</div>
+			
+
+				
+		
+		</div>
+			
+				
+				<!-- FEATHERLIGHT TEXT DIVS -->
+				<div class="lightbox" id="dwellinginfo" width="600px">
+					<h3>Methods: Dwelling Density</h3>
+					<p>
+					<img src="images/methods/dwellingdensity.jpg" width="600px"><br>
+					Census data of total population in housing unit at block group level is used to create a residential density surface through kernel density analysis on ArcGIS.
+					The density values are then reclassified based on 1-10 scale for normalization purposes.
+					</p>
+				</div>
+				
+				<div class="lightbox" id="sidewalkinfo" width="600px">
+					<h3>Methods: Sidewalk Density</h3>
+					<p>
+					<img src="images/methods/sidewalkdensity.jpg" width="600px"><br>
+					Sidewalk coverage density is generated using kernel density analysis from the sidewalk dataset. The density value for each hexagon is recorded. The data is then reclassified using natural break classification
+					based on 1-10 scale.
+					</p>
+				</div>
+
+				<div class="lightbox" id="streetinfo" width="600px">
+					<h3>Methods: Street Connectivity</h3>
+					<p>
+					<img src="images/methods/streetconnectivity.jpg" width="600px"><br>
+					Street intersection nodes are generated using feature vertices to points tool on ArcGIS with point type parameter set to "start". 
+					The number of intersection nodes within each of the hexagon is recorded. The data is then reclassified using natural break classification
+					based on 1-10 scale.
+					</p>
+				</div>
+				
+				<div class="lightbox" id="serviceinfo" width="600px">
+					<h3>Methods: Service Proximity</h3>
+					<p>
+					<img src="images/methods/serviceproximity.jpg" width="600px"><br>
+					Network analyst tool is used to generate service buffers for 70 points of interest in Redmond, which include schools, hospitals, parks and facilities such as
+					fire station and police station. The average distance from hexagon centroid to the nearest amenities are 
+					calculated and logged into its respective hexagon. The data is then reclassified using natural break classification
+					based on 1-10 scale.
+					</p>
+				</div>
+				
+				<div class="lightbox" id="terraininfo" width="600px">
+					<h3>Methods: Terrain Convenience</h3>
+					<p>
+					<img src="images/methods/terrainconvenience.jpg" width="600px"><br>
+					Slope surface is created from the DEM file of Deschutes County, retrieved from USGS National Map Viewer. The average slope values are calculated for each of the hexagon. The data is then reclassified using natural break classification
+					based on 1-10 scale.
+					</p>
+				</div>
+				
+				<div class="lightbox" id="safetyinfo" width="600px">
+					<h3>Methods: Perceived Safety</h3>
+					<p>
+					<img src="images/methods/perceivedsafety.jpg" width="600px"><br>
+					For this study, perceived safety only takes account of traffic speed. Other equally important factors such as
+					well-lit area coverage and crime density are disregarded due to data unavailability. Speed limit density surface is generated from Redmond's speed zone dataset using line density analysis. The average speed limit is calculated for each hexagon. The data is then reclassified using natural break classification
+					based on 1-10 scale.
+					</p>
+				</div>
+				
+				<div class="lightbox" id="landuseinfo" width="600px">
+					<h3>Methods: Land Use Mix</h3>
+					<p>
+					<img src="images/methods/landusemix.jpg" width="600px"><br>
+					The land use data is retrieved from Redmond's development zoning dataset. The number of different land use types is calculated for each hexagon and joine spatially using merge rule. The data is then reclassified manually
+					based on 1-10 scale.
+					</p>
+				</div>
+				
+				<div class="lightbox" id="culdesacsinfo" width="600px">
+					<h3>Methods: Cul-de-Sac Density</h3>
+					<p>
+					<img src="images/methods/culdesacdensity.jpg" width="600px"><br>
+					Culs-de-sac are identified using feature vertices to points tool with point type parameter set to "dangle". 
+					The number of culs-de-sac within each of the hexagon is recorded. The data is then reclassified manually
+					based on 1-10 scale.
+					</p>
+				</div>
+								
+				<div class="lightbox" id="totalinfo" width="600px">
+					<h3>Methods: Total Walkability Score</h3>
+					<p>
+					<br>
+					The score for each of the walkability factor are added up together to form a composite total walkability score. Hexagons with total walkability scores of 6-10 can be considered as walkable, and those with scores 0-5 are relatively less walkable.
+					No specific weights are assigned to the factors, which means all factors are considered equally significant in determining the degree of walkability.
+					</p>
+				</div>
+				
+				<div class="lightbox" id="measureinfo" width="600px">
+					<h3>Measuring walking distance</h3>
+					<img src="images/measuredistance.jpg" width="600px"><br>
+					<p>You can measure distance on the map by clicking on the ruler icon on the top-left side of the map (right under zoom control).
+					</p>
+				</div>
+				
+				<div class="lightbox" id="aboutinfo" width="600px">
+					<h3>ABOUT THIS PROJECT</h3>
+					<p>
+					This web map is developed by <b>Rudy Omri</b> <a href="https://twitter.com/rudyomri" target="_blank" ><img src="images/twitter.png" width="20px" class="infohover"></a>  <a href="https://www.linkedin.com/in/rudyomri" target="_blank"><img src="images/linkedin.png" width="20px" class="infohover"></a> <a href="http://rudyomri.com/" target="_blank"> <img src="images/link.png" width="20px" class="infohover"></a> <a href="mailto:rudyo@uoregon.edu?subject=""" target="_blank"><img src="images/email.png" width="20px" class="infohover"></a>, 
+					graduate student at <a href= "http://geography.uoregon.edu/" target="_blank"><b>Department of Geography</b></a>, <a href= "https://uoregon.edu/" target="_blank"><b>University of Oregon</b></a>.
+					Both key components of this project - GIS analysis and web cartography - are completed as part of <i>Geography 591: Advanced GIS - Walkability in Redmond, OR</i> coursework.
+					The web application is fully built using HTML/CSS, Javascript and open-source libraries: <a href="http://leafletjs.com/" target="_blank"><b>Leaflet</b></a>, <a href="https://www.mapbox.com/" target="_blank"><b>Mapbox</b></a>, <a href="https://jquery.com/" target="_blank"><b>jQuery</b></a>, <a href="http://getbootstrap.com/" target="_blank"><b>Bootstrap</b></a>.
+					<br><br>
+					Credits: Dr. Nick Kohler (Instructor, Geog 591), Joseph Bard (GTF, Geog 591)
+					</p>
+				</div>
+			
+
+			<script type="text/javascript">
+				function toggle_visibility(id) {
+				   var e = document.getElementById(id);
+				   if(e.style.display == 'block')
+					  e.style.display = 'none';
+				   else
+					  e.style.display = 'block';
+				}
+				
+				function newWin (targetURL) {
+					window.open (targetURL, "_blank");
+					return false;
+				}
+				
+
+			</script>
+							
+	<!--    <script src="js/leaflet.js"></script> -->
+			<script src="js/jquery-min.js"></script> 
+			<script src="js/featherlight-1.3.4/assets/javascripts/jquery-1.7.0.min.js"></script>
+			<script src="js/featherlight-1.3.4/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+			<script src="js/EventTarget.js"></script> 
+			<script src="js/ProcessCSV.js"></script> 
+			<script src="js/jquery-1.9.1.min.js"></script>
+			<script src="lib/jquery-ui-1.10.2.custom/js/jquery-ui-1.10.2.custom.min.js"></script>
+			<script src="js/main.js"></script>
+			<link rel="stylesheet" href="lib/jquery-ui/css/custom-theme/jquery-ui-1.10.2.custom.min.css" />
+		
+		</div>
+    
+</body>
+</html>

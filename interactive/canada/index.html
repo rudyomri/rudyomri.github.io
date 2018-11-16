@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Demography of Canada at a Glance</title>
+    <meta content="width=device-width" name="viewport">
+	<link href="css/leaflet.css" rel="stylesheet"><!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <link rel="stylesheet" href="css/leaflet.ie.css" />
+    <![endif]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/css/smoothness/jquery-ui-1.10.2.custom.min.css" />
+    <link href="css/style.css" rel="stylesheet">
+	
+		
+    
+</head>
+
+<body>
+    <header>
+        <h3>Demography of Canada at a Glance</h3><h6>Population growth of Canadian cities (1951-2011)</h6>
+    </header>
+		
+        <div id="container">
+
+			<div id="text">
+
+				<h4><center>Canada's current annual population growth rate is 1.238%, or a
+					daily increase of 1,137 individuals. Between 1867 and 2009 Canada's
+					population grew by 979%. Natural growth accounts for an annual
+					increase of 137,626 persons, at a yearly rate of 0.413%. Montreal
+					was Canada's largest city in terms of population until Toronto
+					succeeded it in 1981. Between 1951 and 2011, the city of Oshawa in
+					Ontario shows the greatest population growth of 1086.67%. This map
+					displays the increase in population of 20 most populous cities in
+					Canada. Hover on each city for more information.</h4></center>
+					</div>
+					<div id="map"></div> 	
+					<div id="infoPanel">
+						<div id="legend">
+							<h4><strong>Population (people)</strong></h4>
+							<center><div class="left" id="legend2"></div></center>
+							<h4><div class="right" id="legendData"></div></h4></div><br><br>
+						<div id="filter">
+						<h4><strong>% change 1951-2011</strong><br><br>
+						<form>
+							<input type="checkbox" id="typeA" checked="true" ><span class="typeA"> >200% </span><br>
+							<input type="checkbox" id="typeB" checked="true"><span class="typeB"> 100% - 200% </span><br>
+							<input type="checkbox" id="typeC" checked="true"><span class="typeC"> <100% </span>
+						</form> </h4>
+						</div>
+						<h4><strong>Search city</strong>
+						<select id="retrieveOptions"></select> </h4>
+						</div>
+					
+					<div id="legendYear"></div>
+					
+					<div id="vcr-controls">
+						<a class="vcr back-full"> <img alt="back full" src="images/back-full.png"></a> 
+						<a class="vcr back"><img alt="back"src="images/back.png"></a> 
+						<a class="vcr play"><img alt="play"src="images/play.png"></a> 
+						<a class="vcr pause"><img alt="pause" src="images/pause.png"></a>
+						<a class="vcr step"><img alt="step" src="images/step.png"></a>
+						<a class="vcr step-full"><img alt="step full" src="images/step-full.png"></a>
+					</div>
+					
+				<div id="temporalSlider"></div>
+				
+				<div id="chartdiv"></div>
+				
+				<a href="#" title="Back to map"><img style="position:fixed; bottom:5px; right:15px;" src="images/top.png"></a>
+				
+				<div id="footer">Data source: <a href="http://www.demographia.com/db-cancma.htm" target="_blank">Demographia.com</a>
+		<br><a href="http://tinyurl.com/rudyomri" target="_blank">Rudy Omri</a>. Geography 575. University of Wisconsin. Spring 2013.</h2></div>
+		
+		
+	</div>
+	
+		<script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+        <script src="js/leaflet.js"></script>
+		<script src="js/chart.js"></script>
+		<script src="js/jquery-min.js"></script> 
+        <script src="js/EventTarget.js"></script> 
+		<script src="js/ProcessCSV.js"></script> 
+		<script src="lib/jquery-ui/js/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="js/main.js"></script>
+		</div>
+    
+</body>
+</html>

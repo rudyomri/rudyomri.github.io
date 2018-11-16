@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<!-- jQuery library (served from Google) -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<!-- bxSlider Javascript file -->
+<script src="js/jquery.bxslider/jquery.bxslider.min.js"></script>
+<!-- bxSlider CSS file -->
+<link href="js/jquery.bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+	
+<head>
+	<meta charset="utf-8">
+	<title>WALKVIZ:REDMOND</title>
+	<link rel="stylesheet" href="css/overview.css" />
+</head>
+
+<body>
+	<!-- <div style="padding: 79px 10px 0px 20px;">
+		<h1>WALKVIZ:REDMOND</h1><h2>GEOVISUALIZATION OF WALKABILITY IN REDMOND, OR</h2>
+	</div> -->
+	<div id = "wrapper">
+		<ul class="bxslider">
+		  <li><img src="images/page02.jpg" title="Funky roots" /></li>
+		  <li><img src="images/page03.jpg" title="The long and winding road" /></li>
+		  <li><img src="images/page04.jpg" title="Happy trees" /></li>
+		  <li><img src="images/page05.jpg" title="Happy trees" /></li>
+		</ul>
+	</div><center>
+	<div style="padding: 10px 10px 10px 10px; width: 100%;">
+		<h3><a href="map.html" > explore web map</a></h3>
+		<h1>WALKVIZ:REDMOND</h1>
+		<h2>GEOVISUALIZATION OF WALKABILITY IN REDMOND, OR</h2>
+	</div>
+	</center>
+
+	<script type="text/javascript">
+		$('.bxslider').bxSlider({
+			mode: 'fade',
+			background: '#efefef',  
+			adaptiveHeight: true,
+			slideWidth: 575,
+			captions: false
+		});
+	</script>
+	
+	
+</body>
+</html>

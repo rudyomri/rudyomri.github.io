@@ -1,0 +1,42 @@
+<html>
+
+  <head>
+   
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css"/>
+    <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet-src.js"></script>
+    <script src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js"></script>
+    <script src="leaflet-heat.js"></script>
+    <meta charset="utf-8">
+    <title>Where Are All The Cabs?</title>
+
+  </head>
+
+  <body>
+   <div id="infobox">
+      <div id="h1">WHERE ARE<br> ALL THE<br> CABS?</div>
+      <div id="sep"></div>
+      <div id="taxi-title">TOTAL # OF CABS</div>
+      <div id="taxi-count"><br></div>
+      <div id="sep"></div>
+      <div id="datetime-title">LAST UPDATED</div>
+      <div id="date-count"><br></div>
+      <div id="time-count"><br></div>
+      <div id="sep"></div>
+      <button onclick="toggleLayer();">Toggle heatmap visibility</button><br>
+      <a href="http://rudyomri.com/interactive/hexcabs/index.html" target="_blank"><button>Hexbin version</button></a>
+      <div id="sep"></div>
+      <div id="sub"><a href="http://rudyomri.com" target="_blank">Rudy Omri</a><br> 2017</div>
+    </div>
+    
+    <div id="map"></div>
+
+
+  </body>
+
+  <script src="main.js"></script>
+
+</html>
+
+
