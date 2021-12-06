@@ -25,29 +25,7 @@ h4,
   font-weight: 700;
   letter-spacing: 1px;
 }
-#last
-{
-  display:none;
-  position:fixed;
-  bottom:0px;
-  right:0px;
-  width:200px;
-}
 
-#last img
-{
-    padding-right:5px;
-}
-
-#last p
-{
-  float:left;
-}
-
-#last div
-{
-  margin:16px;
-}
 
 h1 {
 	font-family: "Bungee Hairline";
